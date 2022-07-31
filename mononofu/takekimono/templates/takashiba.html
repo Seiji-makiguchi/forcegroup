@@ -8,7 +8,7 @@
 <body>
     yahoo
     {%for img_path in img_list%}
-    <img src="{% static 'img/{{ img_path }}' %}">
+        <img src="{% static img_path %}">
     {% endfor %}
 </body>
 </html>

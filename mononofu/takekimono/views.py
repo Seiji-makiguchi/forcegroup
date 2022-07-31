@@ -27,5 +27,5 @@ class TakashibaView(TemplateView):
         img_path_list = glob.glob(settings.STATIC_DIR.format("img/ero*png"))
         context = super(TakashibaView, self).get_context_data(**kwargs)
         print(img_path_list)
-        context["img_list"] = [os.path.basename(k) for k in img_path_list]
+        context["img_list"] = [f"img/{os.path.basename(k)}" for k in img_path_list]
         return render(self.request, self.template_name, context)
