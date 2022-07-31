@@ -20,5 +20,6 @@ import takekimono.views as view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("top/", view.TopPageView.as_view())
+    path("top/", view.TopPageView.as_view()),
+    path("tk/", view.TakashibaView.as_view()),
 ]

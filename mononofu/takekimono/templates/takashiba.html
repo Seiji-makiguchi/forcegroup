@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>高柴君のページ</title>
+</head>
+<body>
+    yahoo
+    {%for img_path in img_list%}
+    <img src="{% static 'img/{{ img_path }}' %}">
+    {% endfor %}
+</body>
+</html>
